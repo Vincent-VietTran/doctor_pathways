@@ -10,6 +10,7 @@ import 'slick-carousel/slick/slick.css'
 import '@/styles/globals.css'
 import '@/styles/react-slick.css'
 import { NextPageWithLayout } from '@/interfaces/layout'
+import theme from '@/config/theme'
 // import 'slick-carousel/slick/slick-theme.css'
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -30,6 +31,17 @@ const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta charSet="utf-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+        {/* PWA primary color */}
+        <meta name="theme-color" content={theme.palette.background.paper} />
+
+        <meta content="#fbfbfb" name="theme-color" />
+        <meta content="#fbfbfb" name="msapplication-navbutton-color" />
+        <meta content="#fbfbfb" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
         <title>React Coursespace</title>
       </Head>
       <MUIProvider>
